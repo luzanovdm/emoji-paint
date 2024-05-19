@@ -1,0 +1,156 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+.preload-emoji {
+  width: 0;
+}
+
+.container {
+  text-align: left;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  min-height: 200px;
+  width: 100%;
+  margin: 60px;
+  display: flex;
+  flex-direction: row;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 32px;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.emoji-picker {
+  padding: 12px 16px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  font-size: smaller;
+  border: 0;
+  color: #007bff;
+  width: initial;
+
+  &:hover {
+    color: #0056b3;
+    background-color: transparent;
+  }
+}
+
+.emoji-mart {
+  z-index: 3;
+  position: absolute;
+  bottom: 100%;
+  transform: scale(0.8);
+  right: 0;
+  transform-origin: bottom right;
+}
+
+.choosen-emoji {
+  text-align: center;
+  font-size: 7rem;
+  display: block;
+}
+
+.result {
+  text-align: center;
+  font-family: monospace;
+}
+
+.space {
+  flex: 1 1 auto;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+}
+
+.copy-button {
+  width: initial;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input,
+textarea:focus {
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.back-link::before {
+  content: "\2190"; /* Unicode для стрелки назад */
+  font-size: 20px;
+}
+
+.back-link:hover {
+  background-color: #0056b3;
+}
+
+.invalid-message {
+  display: block;
+  margin-top: 6px;
+  color: rgb(222, 62, 62);
+  font-size: smaller;
+}
