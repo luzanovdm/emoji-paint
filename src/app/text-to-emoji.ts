@@ -316,3 +316,5 @@ export const EMOJI_MAP: {
   Y: LETTER_Y,
   Z: LETTER_Z,
 } as const;
+
+console.log('EMOJI_MAP', EMOJI_MAP);
